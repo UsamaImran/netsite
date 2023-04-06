@@ -1,0 +1,132 @@
+.login-container {
+  background-color: #fff;
+
+  .card-login-form {
+    font-size: 3rem;
+    box-shadow: none;
+
+    .login-error-message {
+      color: red;
+      font-size: 1rem;
+      text-align: center;
+      position: absolute;
+      top: 2.8rem;
+      // left: 50%;
+      // transform: translateX(-50%);
+      width: 100%;
+    }
+
+    .invalid-feedback {
+      font-size: 0.8rem;
+      margin-top: 0.1rem;
+      margin-bottom: -0.8rem;
+    }
+
+    .login-helpers .col {
+      flex-basis: inherit;
+
+      @include media-breakpoint-up(md) {
+        flex-basis: 0;
+      }
+    }
+
+    .login-btn {
+      width: 80%;
+      text-transform: uppercase;
+
+      @include media-breakpoint-up(sm) {
+        width: 60%;
+      }
+
+      @include media-breakpoint-up(md) {
+        width: 8.1rem;
+      }
+    }
+
+    .login-heading {
+      font-size: x-large;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .forgot-links {
+      cursor: pointer;
+      color: $primary;
+      font-size: 0.8rem;
+    }
+
+    .login-footer {
+      .row {
+        margin: 0;
+      }
+    }
+  }
+
+  .login-image {
+    height: 100%;
+    object-fit: cover;
+    max-width: 100%;
+    opacity: 0.2;
+  }
+
+  .login-info-section {
+    background-color: black !important;
+    color: $white;
+
+    .card-title {
+      color: $white;
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+
+    .card-text {
+      font-size: 0.9rem;
+    }
+
+    .documentation-list {
+      list-style-position: inside;
+      padding-left: 0;
+
+      li {
+        padding-left: 1rem;
+        color: $white !important;
+      }
+    }
+
+    .login-info-link {
+      display: flex;
+      width: 150px;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      cursor: pointer;
+
+      a {
+        z-index: 100;
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+
+      svg {
+        z-index: 100;
+        padding-left: 0.5rem;
+        font-size: 1.5rem;
+        color: #fff;
+      }
+    }
+
+    .login-info-link-hover {
+      background-color: $orange-color;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      transition: all 0.3s ease-out;
+      width: 0.5rem;
+    }
+
+    .login-info-link:hover > .login-info-link-hover {
+      width: 100%;
+    }
+  }
+}

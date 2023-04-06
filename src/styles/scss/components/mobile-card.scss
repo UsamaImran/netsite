@@ -1,0 +1,43 @@
+.card-mobile {
+  h4 {
+    font-weight: $font-weight-bold;
+  }
+
+  .mobile-pagination-btn {
+    flex: 1;
+  }
+
+  .pull-right {
+    font-size: $font-size-sm;
+    width: inherit;
+  }
+}
+
+.region-mobile-card {
+  padding: 0.6rem 2.2rem;
+  border-top: 1px solid $table-dark-border-color;
+  border-bottom: 1px solid $table-dark-border-color;
+
+  h4 {
+    font-family: $headings-font-weight;
+    text-align: center;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .heading-key {
+    line-height: 1.3rem;
+    color: $table-head-color;
+    font-family: $font-family-alt;
+    font-weight: $font-weight-bold;
+  }
+
+  .heading-value {
+    font-weight: 300;
+    color: $text-muted;
+  }
+
+  button {
+    background-color: $default;
+  }
+}

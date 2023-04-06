@@ -1,0 +1,27 @@
+.netsite-tabs{
+    background-color: #f5f6fa;
+    .nav-item{
+        flex: 1 1 0px;
+        &:last-child{
+            .nav-link{
+                border-right-width: 2px;
+            }
+        }
+        .nav-link{
+            color: $active-gray;
+            text-align: center;
+            padding-top:20px;
+            padding-bottom:20px;
+            border: 1px solid #e8e8e8;
+            border-top-width:2px;
+            font-weight: 600;
+            &.active{
+                color: $black;
+                background-color: #fff;
+                border-color:#fff;
+                border-top-color: $primary;
+                border-top-width: 3px;
+            }
+        }
+    }
+}

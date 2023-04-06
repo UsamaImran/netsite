@@ -1,0 +1,13 @@
+.clearSearchBtn {
+  font-size: 1.3rem;
+  position: absolute;
+  z-index: 1;
+  right: 17px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.closeIcon {
+  cursor: pointer;
+  color: rgba(34, 42, 66, 0.5);
+}

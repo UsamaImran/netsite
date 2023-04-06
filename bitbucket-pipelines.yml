@@ -1,0 +1,36 @@
+# S3 pipeline yaml
+image: node:10.15.3
+
+definitions:
+  steps:
+    - step: &build_deploy
+        script:
+          - yarn install
+          - $BUILD_SCRIPT
+          - pipe: atlassian/aws-s3-deploy:0.3.8
+            variables:
+              AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+              AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+              AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+              S3_BUCKET: $AWS_S3_BUCKET_NAME
+              LOCAL_PATH: 'build'
+              ACL: 'public-read'
+          - pipe: atlassian/aws-cloudfront-invalidate:0.4.0
+            variables:
+              AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+              AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+              AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+              DISTRIBUTION_ID: $AWS_CLOUDFRONT_DISTRIBUTION
+              PATHS: '/*'
+
+pipelines:
+  branches:
+    dev:
+      - step:
+          <<: *build_deploy
+          name: Build and Deploy to Dev
+          deployment: Development
+      - step:
+          <<: *build_deploy
+          name: Build and Deploy to Test
+          deployment: Test

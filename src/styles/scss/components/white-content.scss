@@ -1,0 +1,13 @@
+.white-content{
+  .table {
+    &.table-sm {
+      tbody,
+      thead {
+        td,
+        th {
+          padding: .4rem;
+        }
+      }
+    }
+  }
+}

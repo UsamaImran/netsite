@@ -1,0 +1,13 @@
+@import "./black-dash/black-dashboard-pro-react.scss";
+@import "./black-dash-boostrap-fixes.scss";
+@import "./react-tables-custom.scss";
+@import "./theme-overrides.scss";
+@import "./components/buttons.scss";
+@import "./pages/unauthorized";
+@import "./pages/login.scss";
+
+@import "components/includes";
+
+#root {
+  height: 100vh;
+}

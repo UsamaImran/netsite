@@ -1,0 +1,85 @@
+// Container that the modal scrolls within
+.modal-overlay {
+  height: 100vh;
+  overflow: hidden;
+
+  &.show {
+    .modal-dialog {
+      margin: 0;
+      height: 100%;
+      .modal-content {
+        border-radius: 0;
+        height: 100%;
+
+        .account-icon {
+          color: $gray-600;
+        }
+        .modal-header {
+          justify-content: center;
+          font-size: 1.5rem;
+          font-weight: bold;
+          button {
+            top: 32px;
+            right: 20px;
+          }
+        }
+        .modal-body {
+          padding-top: 0;
+        }
+      }
+    }
+  }
+  .close > span:not(.sr-only) {
+    font-size: 3rem;
+  }
+}
+
+.modal-content {
+  overflow: auto;
+}
+
+// modal-card  styles
+
+.modal-card-overlay {
+  height: 100vh;
+  overflow: hidden;
+
+  &.show {
+    .modal-content {
+      .modal-header {
+        display: flex;
+        align-items: center;
+        font-size: 1rem;
+        border-bottom: 1px solid #dee2e6;
+        padding: 0.6rem;
+        color: $gray-500;
+
+        button {
+          top: 0.8rem;
+          right: 1.1rem;
+        }
+
+        span {
+          font-size: 2.3rem;
+        }
+      }
+
+      .modal-body {
+        padding: 1rem 1.5rem;
+
+        p {
+          padding-left: 1rem;
+          margin-bottom: 1rem;
+        }
+
+        h3 {
+          margin-bottom: 1rem !important;
+        }
+      }
+    }
+  }
+}
+
+.modal-backdrop.show {
+  opacity: 2;
+}
